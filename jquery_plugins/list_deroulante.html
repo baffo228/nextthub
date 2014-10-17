@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>JQUERY | LISTE DEROULANTE</title>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!--jquery-->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script  src="js/list_deroulante.js"></script>
+	<link rel="stylesheet" href="css/list_deroulante.css" />
+	<script>
+	    $(function(){
+		$('.dropdown_select').dropdownSelect();
+		
+	    });
+	</script>
+    </head>
+    <body>
+	<select name="condiment" id="condiment" class="dropdown_select">
+	    <option value="">Sélectionnez un condiment</option>
+	    <option value="ketchup">Ketchup</option>
+	    <option value="wasabi">Wasabi</option>
+	    <option value="moutarde">Moutarde</option>
+	    <option value="mayonnaise">Mayonnaise</option>
+	</select>
+	<select name="condiment2" id="condiment2" class="dropdown_select">
+	    <option value="">Sélectionnez un deuxieme condiment</option>
+	    <option value="ketchup">Ketchup</option>
+	    <option value="wasabi">Wasabi</option>
+	    <option value="moutarde">Moutarde</option>
+	    <option value="mayonnaise">Mayonnaise</option>
+	</select>
+	<div>
+	</div>
+    </body>
+</html>
