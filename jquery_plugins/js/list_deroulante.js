@@ -1,5 +1,12 @@
 (function ($) {
-    $.fn.dropdownSelect = function () {
+    $.fn.dropdownSelect = function (options) {
+        
+        var settings= $.extend ({
+            fx : 'slide',
+            fxOptions:{direction:'up'},
+            fxDuration: 500
+        }, options);
+        
         //pour prendre en compte plusiseurs elements on utlise each
         return this.each(function () {
             //Do something to each element here 
@@ -45,10 +52,10 @@
                     dropdown_values_div.find('a').click(function (event) {
                     event.preventDefault();
                     dropdown_click_div.html('<p>' + $(this).text() + '<span class="arrow_down"></span></p>');
-                    dropdown_values_div.slideUp('fast');
+                    dropdown_values_div.show(settings.fx, settings.fxOptions ,settings.fxDuration);
                     select.val($(this).attr('href'));
                 });
-                dropdown_values_div.slideToggle('fast');
+                dropdown_values_div.toggle(settings.fx, settings.fxOptions ,settings.fxDuration);
             });
 select.hide();//on cache le select en cours
         });

@@ -20,6 +20,7 @@
     position: absolute;
    padding: 5px;
    display: none;
+   z-index: 99;
   
 }
 .dropdown_values p, .dropdown_click p{
