@@ -52,7 +52,7 @@
                     dropdown_values_div.find('a').click(function (event) {
                     event.preventDefault();
                     dropdown_click_div.html('<p>' + $(this).text() + '<span class="arrow_down"></span></p>');
-                    dropdown_values_div.show(settings.fx, settings.fxOptions ,settings.fxDuration);
+                    dropdown_values_div.hide(settings.fx, settings.fxOptions ,settings.fxDuration);
                     select.val($(this).attr('href'));
                 });
                 dropdown_values_div.toggle(settings.fx, settings.fxOptions ,settings.fxDuration);
